@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class GifController {
 
-    @RequestMapping (value = "/")
-    @ResponseBody
+    @RequestMapping ("/")
     public String listGifs(){
         return "home";
     }
@@ -19,4 +18,9 @@ public class GifController {
         return "The Gif !!";
     }
 
+    @RequestMapping(value = "/index")
+    @ResponseBody
+    public String home() {
+        return "Hello, Contact Manager!";
+    }
 }
